@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:dist="http://schemas.android.com/apk/distribution"
+          package="com.example.app.dynamic.feature">
+
+    <dist:module
+            dist:instant="false"
+            dist:onDemand="true"
+            dist:title="@string/title_app_dynamic_feature">
+        <dist:fusing dist:include="true"/>
+    </dist:module>
+
+    <application android:icon="@mipmap/ic_launcher">
+        <activity android:name=".FeatureActivity"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
